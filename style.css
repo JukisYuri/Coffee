@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: rgba(37, 35, 35, 0.1); /* Làm nền sáng nhẹ */
+    border-radius: 15px; /* Làm bo góc mềm mại */
+    color: #fff; /* Màu chữ trắng để nổi bật */
+}
+
+.header .logo{
+    font-size: 1.7em;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+.navbar a{
+    position: relative;
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.navbar a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('wallpaper.jpg') no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.home .content{
+    max-width: 600px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 40px 20px; 
+    margin-right: 700px;
+}
+.content {
+    background: rgba(255, 255, 255, 0.1); /* Làm nền sáng nhẹ */
+    border-radius: 15px; /* Làm bo góc mềm mại */
+    color: #fff; /* Màu chữ trắng để nổi bật */
+    max-width: 600px; /* Giữ nội dung trong khung vừa phải */
+}
+
+
+.content h2{
+    font-size: 3em;
+    letter-spacing: .03em;
+}
+.content p{
+    margin: 10px 0 40px;
+}
+.content a{
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    font-weight: 500;
+    padding: 10px 40px;
+    border-radius: 40px;
+    transition: .5s;
+}
+.content a:hover{
+    background: #1e0b04 ;
+}
+
+#typing-effect {
+    color: #92e2f2;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-right: 2px solid; /* Dấu nháy (cursor) */
+    animation: blink 0.7s infinite; /* Thêm hiệu ứng nháy */
+    white-space: nowrap; /* Ngăn không cho xuống dòng */
+    overflow: hidden; /* Ngăn không cho vượt ra ngoài */
+    display: inline-block; /* Cho phép chiều rộng thay đổi theo nội dung */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    0% { border-right-color: rgba(255, 255, 255, 1); }
+    50% { border-right-color: transparent; }
+    100% { border-right-color: rgba(255, 255, 255, 1); }
+}
+
+@keyframes rain {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+body {
+    background: url('wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Hiệu ứng mưa rơi */
+.rain {
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0.5;
+    animation: rain linear infinite;
+}
+
+.rain:nth-child(1) {
+    left: 10%;
+    animation-duration: 0.5s;
+}
+.rain:nth-child(2) {
+    left: 20%;
+    animation-duration: 0.6s;
+}
+.rain:nth-child(3) {
+    left: 30%;
+    animation-duration: 0.7s;
+}
+.rain:nth-child(4) {
+    left: 40%;
+    animation-duration: 0.8s;
+}
+.rain:nth-child(5) {
+    left: 50%;
+    animation-duration: 0.9s;
+}
+.rain:nth-child(6) {
+    left: 60%;
+    animation-duration: 0.7s;
+}
+.rain:nth-child(7) {
+    left: 70%;
+    animation-duration: 0.5s;
+}
+.rain:nth-child(8) {
+    left: 80%;
+    animation-duration: 0.8s;
+}
+.rain:nth-child(9) {
+    left: 90%;
+    animation-duration: 0.6s;
+}
+
+
