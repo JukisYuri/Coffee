@@ -39,18 +39,24 @@ document.addEventListener("DOMContentLoaded", function() {
     
     document.body.appendChild(rainContainer);
 
+    let rainCount = 0;  
+    const maxRainDrops = 100;  
+    
     function createRainDrop() {
-        const rainDrop = document.createElement('div');
-        rainDrop.className = 'rain';
-        rainDrop.style.left = Math.random() * 100 + 'vw'; // Vị trí ngẫu nhiên từ trái sang phải
-        rainDrop.style.animationDuration = Math.random() * 0.5 + 0.5 + 's'; // Thay đổi tốc độ ngẫu nhiên
-        rainContainer.appendChild(rainDrop);
-        
-        // Xóa giọt mưa sau khi nó rơi xuống
-        rainDrop.addEventListener('animationend', () => {
-            rainDrop.remove();
-        });
+        if (rainCount < maxRainDrops) { 
+            const rainDrop = document.createElement('div');
+            rainDrop.className = 'rain';
+            rainDrop.style.left = Math.random() * 100 + 'vw'; // Vị trí ngẫu nhiên từ trái sang phải
+            rainDrop.style.animationDuration = Math.random() * 0.5 + 0.5 + 's'; // Thay đổi tốc độ ngẫu nhiên
+            rainContainer.appendChild(rainDrop);
+            rainCount++;  // Tăng biến đếm số giọt mưa
+            
+            // Xóa giọt mưa sau khi nó rơi xuống và giảm biến đếm
+            rainDrop.addEventListener('animationend', () => {
+                rainDrop.remove();
+                rainCount--;
+            });
+        }
     }
-
     setInterval(createRainDrop, 100); // Tạo giọt mưa mỗi 100ms
 });
