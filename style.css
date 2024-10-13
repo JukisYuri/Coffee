@@ -75,6 +75,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px 20px;
   margin-right: 700px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .home .content h2 {
   font-size: 3em;
@@ -261,6 +263,7 @@ body {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-top: -20px;
 }
 .modal .modal-content .close:hover, .modal .modal-content .close:focus {
   color: black;
@@ -279,7 +282,7 @@ body {
   color: #888;
 }
 .input-box .email-icon {
-  top: 16px;
+  top: 10px;
 }
 .input-box .password-icon {
   top: 10px;

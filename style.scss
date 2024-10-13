@@ -82,6 +82,8 @@ $font-family: "Poppins", sans-serif;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 40px 20px;
         margin-right: 700px; // Điều chỉnh quan trọng
+        border-radius: 15px; // Bo góc cho phần nội dung
+        overflow: hidden; // Đảm bảo các phần nội dung không vượt ra ngoài góc bo
 
         h2 {
             font-size: 3em;
@@ -284,7 +286,8 @@ body {
             float: right;
             font-size: 28px;
             font-weight: bold;
-
+            margin-top: -20px;
+        
             &:hover,
             &:focus {
                 color: black;
@@ -307,7 +310,7 @@ body {
     }
 
     .email-icon {
-        top: 16px; 
+        top: 10px; 
     }
 
     .password-icon {
