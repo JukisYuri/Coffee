@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Login Page</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <header class="header">
         <a href="#" class="logo snow-effect"><ion-icon name="cafe-outline"></ion-icon>Coffee</a>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <a href="#"><ion-icon name="home-outline"></ion-icon> Home</a>
             <a href="#"><ion-icon name="alert-circle-outline"></ion-icon> About</a>
             <a href="#"><ion-icon name="beer-outline"></ion-icon> Menu</a>
@@ -23,14 +25,42 @@
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
     </header>
-    <section class="home"> 
+    <section class="home">
         <div class="content">
             <h2>It's Coffee Time</h2>
             <h3 id="typing-effect"></h3>
-            <p>Explore our range of coffee, crafted with care. Our coffee is sourced from locally grown coffee beans. Enjoy a cup of coffee and relax.</p>
-            <a href="#" class="btn"><ion-icon name="fast-food-outline"></ion-icon>  Get yours now</a>
+            <p>
+                Explore our range of coffee, crafted with care. Our coffee is sourced
+                from locally grown coffee beans. Enjoy a cup of coffee and relax.
+            </p>
+            <a href="javascript:void(0)" class="btn" id="get-yours-btn">
+                <ion-icon name="fast-food-outline"></ion-icon> Get yours now
+            </a>
         </div>
-    </section> 
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Member Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon email-icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <input type="email" placeholder="Email" required />
+                    </div>
+                    <div class="input-box">
+                        <span class="icon password-icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input type="password" placeholder="Password" required />
+                    </div>                    
+                    <div class="remember-forgot">
+                        <label><input type="checkbox" /> Remember me</label>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="register-link">
+                        <p>Not a member? <a href="#">Register now</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="advanceEffect.js"></script>

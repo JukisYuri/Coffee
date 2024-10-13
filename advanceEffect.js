@@ -60,3 +60,65 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     setInterval(createRainDrop, 100); // Tạo giọt mưa mỗi 100ms
 });
+function openModal() {
+    document.getElementById("login-modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("login-modal").style.display = "none";
+}
+
+document.querySelector(".close").onclick = closeModal;
+
+window.onclick = function(event) {
+    const modal = document.getElementById("login-modal");
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+// Thêm sự kiện click cho nút "Get Yours Now"
+document.getElementById("get-yours-btn").onclick = openModal;
+
+// Lấy các phần tử cần thiết
+const loginModal = document.getElementById("login-modal");
+const navbar = document.querySelector(".navbar"); // Sửa: Đảm bảo bạn đang lấy đúng navbar
+const getYoursBtn = document.getElementById("get-yours-btn");
+const closeBtn = document.querySelector(".close");
+
+// Hàm để ẩn navbar với hiệu ứng fade
+function hideNavbar() {
+    navbar.classList.add("hidden");
+}
+
+// Hàm để hiện navbar với hiệu ứng fade
+function showNavbar() {
+    navbar.classList.remove("hidden");
+}
+
+// Hiện modal khi nhấn nút "Get yours now"
+getYoursBtn.onclick = function() {
+    if (loginModal.style.display === "block") {
+        // Nếu modal đã mở, không làm gì cả
+        return;
+    }
+    loginModal.style.display = "block";
+    hideNavbar(); // Ẩn navbar khi mở modal
+}
+
+// Đóng modal khi nhấn nút đóng
+closeBtn.onclick = function() {
+    loginModal.style.display = "none";
+    showNavbar(); // Hiện navbar khi đóng modal
+}
+
+// Đóng modal khi nhấn ra ngoài modal
+window.onclick = function(event) {
+    if (event.target === loginModal) {
+        loginModal.style.display = "none";
+        showNavbar(); // Hiện navbar khi đóng modal
+    }
+}
+
+
+

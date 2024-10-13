@@ -17,9 +17,9 @@
   justify-content: space-between;
   align-items: center;
   z-index: 99;
-  background: rgba(37, 35, 35, 0.1); 
-  border-radius: 15px; 
-  color: #fff; 
+  background: rgba(37, 35, 35, 0.1);
+  border-radius: 15px;
+  color: #fff;
 }
 .header .logo {
   font-size: 1.7em;
@@ -101,11 +101,11 @@
   font-family: "Poppins", sans-serif;
   font-size: 1.5em;
   font-weight: bold;
-  border-right: 2px solid; /* Dấu nháy (cursor) */
-  animation: blink 0.7s infinite; /* Thêm hiệu ứng nháy */
-  white-space: nowrap; /* Ngăn không cho xuống dòng */
-  overflow: hidden; /* Ngăn không cho vượt ra ngoài */
-  display: inline-block; /* Cho phép chiều rộng thay đổi theo nội dung */
+  border-right: 2px solid;
+  animation: blink 0.7s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
 }
 
 @keyframes typing {
@@ -236,4 +236,87 @@ body {
     opacity: 0;
   }
 }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal .modal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 15%;
+  margin-left: 50%;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  border-radius: 10px;
+}
+.modal .modal-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal .modal-content .close:hover, .modal .modal-content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
+.input-box {
+  margin-bottom: 15px;
+  position: relative;
+}
+.input-box .icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #888;
+}
+.input-box .email-icon {
+  top: 16px;
+}
+.input-box .password-icon {
+  top: 10px;
+}
+.input-box input {
+  width: 100%;
+  padding: 10px 30px;
+  border: 1px solid #159987;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  color: rgb(25, 69, 249);
+  font-weight: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #b7eedf;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.navbar {
+  transition: opacity 0.5s ease;
+}
+.navbar.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.navbar.visible {
+  opacity: 1;
+  pointer-events: auto;
+}/*# sourceMappingURL=style.css.map */

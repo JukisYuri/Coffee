@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-$font-family: 'Poppins', sans-serif;
+$font-family: "Poppins", sans-serif;
 
 * {
     margin: 0;
@@ -19,9 +19,9 @@ $font-family: 'Poppins', sans-serif;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
-    background: rgba(37, 35, 35, 0.1); 
-    border-radius: 15px; /* Làm bo góc mềm mại */
-    color: #fff; 
+    background: rgba(37, 35, 35, 0.1);
+    border-radius: 15px;
+    color: #fff;
 
     .logo {
         font-size: 1.7em;
@@ -45,7 +45,7 @@ $font-family: 'Poppins', sans-serif;
             margin-left: 40px;
 
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 left: 0;
                 bottom: -6px;
@@ -55,7 +55,7 @@ $font-family: 'Poppins', sans-serif;
                 border-radius: 5px;
                 transform-origin: right;
                 transform: scaleX(0);
-                transition: .5s;
+                transition: 0.5s;
             }
 
             &:hover::after {
@@ -73,7 +73,7 @@ $font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('wallpaper.jpg') no-repeat;
+    background: url("wallpaper.jpg") no-repeat;
     background-size: cover;
 
     .content {
@@ -81,11 +81,11 @@ $font-family: 'Poppins', sans-serif;
         color: #fff;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 40px 20px;
-        margin-right: 700px;
+        margin-right: 700px; // Điều chỉnh quan trọng
 
         h2 {
             font-size: 3em;
-            letter-spacing: .03em;
+            letter-spacing: 0.03em;
         }
 
         p {
@@ -99,7 +99,7 @@ $font-family: 'Poppins', sans-serif;
             font-weight: 500;
             padding: 10px 40px;
             border-radius: 40px;
-            transition: .5s;
+            transition: 0.5s;
 
             &:hover {
                 background: #1e0b04;
@@ -113,22 +113,32 @@ $font-family: 'Poppins', sans-serif;
     font-family: $font-family;
     font-size: 1.5em;
     font-weight: bold;
-    border-right: 2px solid; /* Dấu nháy (cursor) */
-    animation: blink 0.7s infinite; /* Thêm hiệu ứng nháy */
-    white-space: nowrap; /* Ngăn không cho xuống dòng */
-    overflow: hidden; /* Ngăn không cho vượt ra ngoài */
-    display: inline-block; /* Cho phép chiều rộng thay đổi theo nội dung */
+    border-right: 2px solid;
+    animation: blink 0.7s infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blink {
-    0% { border-right-color: rgba(255, 255, 255, 1); }
-    50% { border-right-color: transparent; }
-    100% { border-right-color: rgba(255, 255, 255, 1); }
+    0% {
+        border-right-color: rgba(255, 255, 255, 1);
+    }
+    50% {
+        border-right-color: transparent;
+    }
+    100% {
+        border-right-color: rgba(255, 255, 255, 1);
+    }
 }
 
 @keyframes rain {
@@ -138,7 +148,7 @@ $font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: url('wallpaper.jpg') no-repeat center center fixed;
+    background: url("wallpaper.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -200,8 +210,9 @@ body {
     letter-spacing: 1px;
     overflow: hidden;
 
-    &::before, &::after {
-        content: '';
+    &::before,
+    &::after {
+        content: "";
         position: absolute;
         top: -10px;
         width: 5px;
@@ -245,5 +256,102 @@ body {
     100% {
         transform: translateY(60px);
         opacity: 0;
+    }
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+
+    .modal-content {
+        background-color: rgba(255,255,255,0.8); 
+        margin-top: 15%;
+        margin-left: 50%;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px; 
+        border-radius: 10px; 
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+
+            &:hover,
+            &:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.input-box {
+    margin-bottom: 15px;
+    position: relative;
+
+    .icon {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        color: #888;
+    }
+
+    .email-icon {
+        top: 16px; 
+    }
+
+    .password-icon {
+        top: 10px; 
+    }
+
+    input {
+        width: 100%;
+        padding: 10px 30px; 
+        border: 1px solid #159987;
+        border-radius: 5px;
+    }
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    color: rgb(25, 69, 249);
+    font-weight: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #b7eedf; // Màu khi hover
+    }
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.navbar {
+    // Các thuộc tính khác ở đây...
+    transition: opacity 0.5s ease; // Thêm hiệu ứng chuyển tiếp
+
+    &.hidden {
+        opacity: 0; // Đặt độ mờ thành 0 khi ẩn
+        pointer-events: none; // Không cho phép tương tác khi ẩn
+    }
+
+    &.visible {
+        opacity: 1; // Đặt độ mờ thành 1 khi hiện
+        pointer-events: auto; // Cho phép tương tác khi hiện
     }
 }
